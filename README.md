@@ -13,6 +13,7 @@ Discord Insta ping bot is a focused, easy-to-run Python utility that automates I
 - [Features](#features)
 - [Quick Start](#quick-start)
 - [Configuration](#configuration)
+- [Discord Commands](#discord-commands)
 - [Usage Examples](#usage-examples)
 - [Deployment](#deployment)
 - [Security](#security)
@@ -83,6 +84,47 @@ python dcinstabot.py
 
 - Use `.env` to provide secrets and configuration. Keep `.env` local and never commit it.
 - The example `.env.example` contains placeholders and should be safe to commit.
+
+## Discord Commands
+
+The bot registers these Discord slash commands. Type `/` in a server where the bot is installed to see them and their arguments.
+
+| Command | Arguments | Purpose |
+| --- | --- | --- |
+| `/insta_last` | `username`, `amount` | Fetch the latest posts from a public Instagram account. |
+| `/insta_search` | `query`, `amount` | Search recent posts for a hashtag or keyword. The `#` prefix is optional. |
+| `/insta_sub` | `username` | Subscribe the current channel to an Instagram account. New posts and reels are posted automatically. |
+| `/insta_unsub` | `username` | Remove an Instagram subscription from the current server. |
+| `/insta_list` | None | List the Instagram accounts currently subscribed in the server. |
+
+### Command Examples
+
+Fetch the five latest posts from an account:
+
+```text
+/insta_last username:nasa amount:5
+```
+
+Search for three recent posts using a hashtag:
+
+```text
+/insta_search query:#python amount:3
+```
+
+Start and stop automatic notifications:
+
+```text
+/insta_sub username:nasa
+/insta_unsub username:nasa
+```
+
+View all current subscriptions:
+
+```text
+/insta_list
+```
+
+Subscriptions are checked once per day. The bot only fetches public Instagram accounts, and notifications are sent to the channel selected when `/insta_sub` is used.
 
 ## Usage Examples
 
