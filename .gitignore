@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Pytest cache
+.pytest_cache/
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Environment files (keep real secrets local)
+.env
+.env.local
+.env.*.local
+
+# Runtime and data files (do not commit)
+ig_sessions.json
+insta_subscriptions.db
+*.sqlite3
+*.db
+
+# Logs
+*.log
+logs/
+
+# Optional: lock files
+# Pipenv
+Pipfile.lock
